@@ -8,9 +8,6 @@
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.vue\"",
     "lint": "eslint --fix --ext .js,.vue src"
   },
-  "pre-commit": [
-    "format"
-  ],
   "dependencies": {
     "dotenv": "^10.0.0",
     "vue": "^3.2.16"
