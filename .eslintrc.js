@@ -25,6 +25,22 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'prefer-const': 'off',
-    '@typescript-eslint/no-explicit-any': ['off', { ignoreRestArgs: false }]
-  }
+    '@typescript-eslint/no-explicit-any': ['off', { ignoreRestArgs: false }],
+    'vue/script-indent': [
+      'error',
+      2,
+      {
+        // script标签缩进设置
+        baseIndent: 1
+      }
+    ]
+  },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off'
+      }
+    }
+  ]
 }
