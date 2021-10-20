@@ -11,3 +11,9 @@ interface INPUTMODE {
   mode: string
   command: string
 }
+
+interface ImportMetaEnv {
+  NODE_ENV: string
+  VITE_APP_TITLE: string
+  VITE_APP_BASE: string
+}

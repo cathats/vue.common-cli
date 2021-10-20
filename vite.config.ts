@@ -6,7 +6,7 @@ import path from 'path'
 export default ({ mode }: INPUTMODE) => {
   require('dotenv').config({ path: `./lib/.env.${mode}` })
   return defineConfig({
-    base: '/',
+    base: process.env.VITE_APP_BASE,
     plugins: [vue()],
     resolve: {
       alias: {
