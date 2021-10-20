@@ -8,6 +8,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHistory('/'), // TODO: 需要 baseUrl
+  history: createWebHistory(import.meta.env.VITE_APP_BASE),
   routes
 })
