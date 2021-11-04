@@ -10,7 +10,18 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "typeRoots": ["./node_modules/@types/", "src/@types"]
+    "types": ["vite/client", "jest"],
+    "typeRoots": ["./node_modules/@types/", "types"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./vite.config.ts", "./test/**/*.ts", "mock/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./vite.config.ts",
+    "./test/**/*.ts",
+    "mock/**/*.ts",
+    "types/**/*.d.ts",
+    "types/**/*.ts"
+  ]
 }

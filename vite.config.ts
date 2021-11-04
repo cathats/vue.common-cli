@@ -7,7 +7,7 @@ export default ({ mode }: INPUTMODE) => {
   require('dotenv').config({ path: `./lib/.env.${mode}` })
   return defineConfig({
     base: process.env.VITE_BASE,
-    // plugins: createVitePlugins(),
+    plugins: createVitePlugins(),
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
