@@ -11,4 +11,4 @@ export const RootRoute: RouteRecordRaw = {
   }
 }
 
-export const basicRoutes = []
+export const basicRoutes = [RootRoute]
