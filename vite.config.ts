@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import path from 'path'
 import { createVitePlugins } from './build/vite/plugin/index'
+import { resolveEnv } from './build/vite/utils'
 
-export default ({ mode }: INPUTMODE) => {
-  require('dotenv').config({ path: `./lib/.env.${mode}` })
+export default ({ command, mode }: INPUTMODE) => {
+  const env = require('dotenv').config({ path: `./lib/.env.${mode}` })
+  const viteEnv = resolveEnv(env)
+  const isBuild = command === 'build'
   return defineConfig({
     base: process.env.VITE_BASE,
-    plugins: createVitePlugins(),
+    plugins: createVitePlugins(viteEnv, isBuild),
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
