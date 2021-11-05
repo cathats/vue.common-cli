@@ -1,14 +1,17 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { router } from './router/router'
-import { store } from './store'
+import { setupStore } from './store'
 
-const app = createApp(App)
+async function bootstrap() {
+  const app = createApp(App)
 
-// 挂载路由
-app.use(router)
+  // store 配置项
+  setupStore(app)
 
-// 挂载 vuex
-app.use(store)
+  // 路由配置项
+  app.use(router)
 
-app.mount('#app')
+  app.mount('#app')
+}
+bootstrap()

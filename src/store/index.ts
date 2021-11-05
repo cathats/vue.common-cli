@@ -1,10 +1,8 @@
-import { createStore } from 'vuex'
-import mutations from './mutations'
-import state from './state'
+import type { App } from 'vue'
+import { createPinia } from 'pinia'
 
-export const store = createStore({
-  state() {
-    return state
-  },
-  mutations: mutations
-})
+const store = createPinia()
+export function setupStore(app: App<Element>) {
+  app.use(store)
+}
+export { store }
