@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { router } from './router/router'
+import { setupRouter } from './router'
 import { setupStore } from './store'
 
 async function bootstrap() {
@@ -9,8 +9,8 @@ async function bootstrap() {
   // store 配置项
   setupStore(app)
 
-  // 路由配置项
-  app.use(router)
+  // router 配置项
+  setupRouter(app)
 
   app.mount('#app')
 }
