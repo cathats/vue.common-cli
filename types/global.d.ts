@@ -11,7 +11,7 @@ declare global {
   declare interface ViteEnv {
     VITE_NODE_ENV: string
     VITE_TITLE: string
-    VITE_BASE: string
+    VITE_PUBLIC_BASE: string
   }
   declare interface ImportMetaEnv extends ViteEnv {
     __: unknown
