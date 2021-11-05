@@ -12,7 +12,12 @@
     "skipLibCheck": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "jest"],
-    "typeRoots": ["./node_modules/@types/", "types"]
+    "typeRoots": ["./node_modules/@types/", "types"],
+    "baseUrl": ".",
+    "paths": {
+      "/@/*": ["src/*"],
+      "/#/*": ["types/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
@@ -25,6 +30,6 @@
     "types/**/*.d.ts",
     "types/**/*.ts",
     "build/**/*.ts",
-    "build/**/*.d.ts",
+    "build/**/*.d.ts"
   ]
 }

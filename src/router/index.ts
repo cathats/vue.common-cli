@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { basicRoutes } from './modules'
+import { basicRoutes } from './routes'
 
 import type { RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
